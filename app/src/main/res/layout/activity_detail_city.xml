@@ -71,6 +71,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:gravity="center"
             android:text="ECO TOURISM" />
     </androidx.cardview.widget.CardView>
@@ -78,7 +80,7 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardCityTurism"
         android:layout_width="0dp"
-        android:layout_height="200dp"
+        android:layout_height="250dp"
         android:backgroundTint="#eca0b6"
         android:clickable="true"
         android:focusable="true"
@@ -91,6 +93,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:gravity="center"
             android:text="CITY TOURISM" />
     </androidx.cardview.widget.CardView>
@@ -98,20 +102,21 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardCulinary"
         android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_height="250dp"
         android:clickable="true"
         android:focusable="true"
         android:foreground="?android:selectableItemBackground"
         android:backgroundTint="#fafba4"
         app:layout_constraintEnd_toEndOf="@id/cardCityTurism"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/cardCityTurism"
-        app:layout_constraintBottom_toBottomOf="parent">
+        app:layout_constraintTop_toBottomOf="@+id/cardCityTurism">
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:layout_margin="10dp"
+            android:textSize="18sp"
+            android:textStyle="bold"
             android:gravity="center"
             android:text="CULINARY" />
     </androidx.cardview.widget.CardView>
