@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.DetailTypeDest"></activity>
+        <activity android:name=".ui.CulinaryActivity"></activity>
+        <activity android:name=".ui.DetailDestActivity" />
+        <activity android:name=".ui.DetailTypeDestActivity" />
         <activity android:name=".ui.DetailCityActivity" />
         <activity
             android:name=".MainActivity"

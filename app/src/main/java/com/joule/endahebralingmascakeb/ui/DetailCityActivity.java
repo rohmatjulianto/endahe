@@ -6,16 +6,13 @@ import androidx.cardview.widget.CardView;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 
 import com.github.islamkhsh.CardSliderViewPager;
 import com.joule.endahebralingmascakeb.R;
-import com.joule.endahebralingmascakeb.adapter.SliderTopAdapter;
 import com.joule.endahebralingmascakeb.model.ModelBtn;
 import com.joule.endahebralingmascakeb.model.ModelDestination;
-import com.joule.endahebralingmascakeb.source.DummyData;
 
 import java.util.ArrayList;
 
@@ -69,17 +66,22 @@ public class DetailCityActivity extends AppCompatActivity implements View.OnClic
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(v.getContext(), DetailTypeDest.class);
-        intent.putExtra(DetailTypeDest.EXTRA_KABUPATEN, modelBtn.getName());
+        Intent intent = null;
         switch (v.getId()){
             case R.id.cardEcoTurism:
-                intent.putExtra(DetailTypeDest.TYPE_DETAIL, "Eco Turism");
+                intent = new Intent(v.getContext(), DetailTypeDestActivity.class);
+                intent.putExtra(DetailTypeDestActivity.EXTRA_KABUPATEN, modelBtn.getName());
+                intent.putExtra(DetailTypeDestActivity.TYPE_DETAIL, "Eco Tourism");
                 break;
             case R.id.cardCityTurism:
-                intent.putExtra(DetailTypeDest.TYPE_DETAIL, "City Turism");
+                intent = new Intent(v.getContext(), DetailTypeDestActivity.class);
+                intent.putExtra(DetailTypeDestActivity.EXTRA_KABUPATEN, modelBtn.getName());
+                intent.putExtra(DetailTypeDestActivity.TYPE_DETAIL, "City Tourism");
                 break;
             case R.id.cardCulinary:
-                intent.putExtra(DetailTypeDest.TYPE_DETAIL, "Culinary");
+                intent = new Intent(v.getContext(), CulinaryActivity.class);
+                intent.putExtra(CulinaryActivity.EXTRA_KABUPATEN, modelBtn.getName());
+                intent.putExtra(CulinaryActivity.TYPE_DETAIL, "Culinary");
                 break;
         }
 

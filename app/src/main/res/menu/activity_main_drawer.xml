@@ -12,9 +12,5 @@
             android:id="@+id/nav_about"
             android:icon="@drawable/ic_info"
             android:title="@string/about_bralingmascakeb" />
-        <item
-            android:id="@+id/nav_maps"
-            android:icon="@drawable/ic_map"
-            android:title="How to get there" />
     </group>
 </menu>

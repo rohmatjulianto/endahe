@@ -38,6 +38,7 @@ public class SliderTopAdapter extends CardSliderAdapter<ModelDestination> {
         tvType.setText(modelDestinations.getName());
         Glide.with(context)
                 .load(modelDestinations.getImage())
+                .centerCrop()
                 .into(imgSlider);
     }
 

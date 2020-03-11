@@ -4,23 +4,16 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.LinearLayout;
-import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
-import androidx.lifecycle.Observer;
-import androidx.lifecycle.ViewModelProviders;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.github.islamkhsh.CardSliderViewPager;
 import com.joule.endahebralingmascakeb.R;
 import com.joule.endahebralingmascakeb.adapter.BtnAdapter;
-import com.joule.endahebralingmascakeb.adapter.NearestAdapter;
-import com.joule.endahebralingmascakeb.adapter.PopularAdapter;
 import com.joule.endahebralingmascakeb.adapter.SliderTopAdapter;
 import com.joule.endahebralingmascakeb.model.ModelBtn;
 import com.joule.endahebralingmascakeb.model.ModelDestination;
@@ -58,17 +51,17 @@ public class HomeFragment extends Fragment {
         BtnAdapter btnAdapter = new BtnAdapter(getActivity(),modelBtn);
         rvBtn.setAdapter(btnAdapter);
 
-        rvNear = view.findViewById(R.id.rv_near);
-        rvNear.setHasFixedSize(true);
-        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
-        rvNear.setLayoutManager(linearLayoutManager);
-        NearestAdapter nearestAdapter = new NearestAdapter(getActivity(), dataTopSlider);
-        rvNear.setAdapter(nearestAdapter);
-
-        rvPop = view.findViewById(R.id.rv_pop);
-        rvPop.setLayoutManager(new GridLayoutManager(getActivity(),2));
-        PopularAdapter popularAdapter = new PopularAdapter(getActivity(), dataTopSlider);
-        rvPop.setAdapter(popularAdapter);
+//        rvNear = view.findViewById(R.id.rv_near);
+//        rvNear.setHasFixedSize(true);
+//        LinearLayoutManager linearLayoutManager = new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false);
+//        rvNear.setLayoutManager(linearLayoutManager);
+//        NearestAdapter nearestAdapter = new NearestAdapter(getActivity(), dataTopSlider);
+//        rvNear.setAdapter(nearestAdapter);
+//
+//        rvPop = view.findViewById(R.id.rv_pop);
+//        rvPop.setLayoutManager(new GridLayoutManager(getActivity(),2));
+//        PopularAdapter popularAdapter = new PopularAdapter(getActivity(), dataTopSlider);
+//        rvPop.setAdapter(popularAdapter);
 
         return view;
     }

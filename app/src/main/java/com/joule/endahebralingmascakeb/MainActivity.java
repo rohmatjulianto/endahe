@@ -1,5 +1,6 @@
 package com.joule.endahebralingmascakeb;
 
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.MenuItem;
 
@@ -8,7 +9,6 @@ import android.view.Menu;
 import com.google.android.material.navigation.NavigationView;
 import com.joule.endahebralingmascakeb.ui.AboutFragment;
 import com.joule.endahebralingmascakeb.ui.HomeFragment;
-import com.joule.endahebralingmascakeb.ui.HowtogetthereFragment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -24,6 +24,7 @@ public class MainActivity extends AppCompatActivity {
     DrawerLayout drawer;
     Toolbar toolbar;
     NavigationView navigationView;
+    MediaPlayer mediaPlayer;
 
 
     @Override
@@ -38,6 +39,9 @@ public class MainActivity extends AppCompatActivity {
 
         drawer = findViewById(R.id.drawer_layout);
         navigationView = findViewById(R.id.nav_view);
+
+        mediaPlayer = MediaPlayer.create(this, R.raw.music);
+        mediaPlayer.start(); // no need to call prepare(); create() does that for you
 
         if (savedInstanceState == null){
             Fragment currentFragment = new HomeFragment();
@@ -60,10 +64,6 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_about:
                         title = "About";
                         fragment = new AboutFragment();
-                        break;
-                    case R.id.nav_maps:
-                        title = "How to get there";
-                        fragment = new HowtogetthereFragment();
                         break;
                 }
 
@@ -100,5 +100,16 @@ public class MainActivity extends AppCompatActivity {
         return true;
     }
 
-
+    @Override
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+        if (item.getItemId() == R.id.action_music){
+            if (mediaPlayer.isPlaying()){
+                mediaPlayer.stop();
+            }else{
+                mediaPlayer = MediaPlayer.create(this, R.raw.music);
+                mediaPlayer.start();
+            }
+        }
+        return true;
+    }
 }
