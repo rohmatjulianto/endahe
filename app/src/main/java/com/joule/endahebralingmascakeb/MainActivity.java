@@ -9,6 +9,8 @@ import android.view.Menu;
 import com.google.android.material.navigation.NavigationView;
 import com.joule.endahebralingmascakeb.ui.AboutFragment;
 import com.joule.endahebralingmascakeb.ui.HomeFragment;
+import com.joule.endahebralingmascakeb.ui.TraditionalEvent;
+import com.joule.endahebralingmascakeb.ui.TraditionalMusicFragment;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBarDrawerToggle;
@@ -64,6 +66,14 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.nav_about:
                         title = "About";
                         fragment = new AboutFragment();
+                        break;
+                    case R.id.nav_traditional:
+                        title = "Traditional Event";
+                        fragment = new TraditionalEvent();
+                        break;
+                    case R.id.nav_music:
+                        title = "Traditional Music";
+                        fragment = new TraditionalMusicFragment();
                         break;
                 }
 
